@@ -47,7 +47,7 @@ main() {
   set status-right-length "100"
 
   # messages
-  set message-style "fg=${thm_cyan},bg=${thm_gray},align=centre"
+  set message-style "fg=${thm_blue},bg=${thm_bg},align=centre"
   set message-command-style "fg=${thm_cyan},bg=${thm_gray},align=centre"
 
   # panes
@@ -66,15 +66,15 @@ main() {
   readonly wt_enabled
 
   # These variables are the defaults so that the setw and set calls are easier to parse.
-  readonly show_directory="#[fg=$thm_blue,bg=$thm_bg]#[fg=$thm_blue,bg=$thm_gray]  #[fg=$thm_blue,bg=$thm_gray] #{b:pane_current_path} #{?client_prefix,#[fg=$thm_red]"
-  readonly show_window="#[fg=$thm_gray,bg=$thm_bg]#[fg=$thm_blue,bg=$thm_gray]#[fg=$thm_blue,bg=$thm_gray] #W #{?client_prefix,#[fg=$thm_red]"
-  readonly show_session="#[fg=$thm_light_gray]}#[bg=$thm_gray]#{?client_prefix,#[bg=$thm_red],#[bg=$thm_light_gray]}#[fg=$thm_bg] #[fg=$thm_blue,bg=$thm_gray] #S "
+  readonly show_directory="#[fg=$thm_blue,bg=$thm_bg]#[fg=$thm_blue,bg=$thm_gray]  #[fg=$thm_fg,bg=$thm_gray] #{b:pane_current_path} #{?client_prefix,#[fg=$thm_red]"
+  readonly show_window="#[fg=$thm_gray,bg=$thm_bg]#[fg=$thm_blue,bg=$thm_gray]#[fg=$thm_fg,bg=$thm_gray] #W #{?client_prefix,#[fg=$thm_red]"
+  readonly show_session="#[fg=$thm_gray]}#[bg=$thmlight_gray]#{?client_prefix,#[bg=$thm_red],#[bg=$thm_gray]}#[fg=$thm_blue] #[fg=$thm_blue,bg=$thm_gray] #S "
   readonly show_directory_in_window_status="#[fg=$thm_bg,bg=$thm_blue] #I #[fg=$thm_blue,bg=$thm_gray] #{b:pane_current_path} "
   readonly show_directory_in_window_status_current="#[fg=$thm_bg,bg=$thm_orange] #I #[fg=$thm_fg,bg=$thm_bg] #{b:pane_current_path} "
  # readonly show_window_in_window_status="#[fg=$thm_fg,bg=$thm_bg] #W #[fg=$thm_bg,bg=$thm_blue] #I#[fg=$thm_blue,bg=$thm_bg]#[fg=$thm_fg,bg=$thm_bg,nobold,nounderscore,noitalics] "
  # readonly show_window_in_window_status_current="#[fg=$thm_fg,bg=$thm_gray] #W #[fg=$thm_bg,bg=$thm_orange] #I#[fg=$thm_orange,bg=$thm_bg]#[fg=$thm_fg,bg=$thm_bg,nobold,nounderscore,noitalics] "
-  readonly show_window_in_window_status="#[fg=$thm_gray,bg=$thm_bg]#[fg=$thm_blue,bg=$thm_gray]#{b:pane_current_path} #[fg=$thm_blue,bg=$thm_gray] #I#[fg=$thm_gray,bg=$thm_bg]#[fg=$thm_gray,bg=$thm_bg] "
-  readonly show_mem_cpu="#[fg=$thm_blue,bg=$thm_bg]#[fg=$thm_gray,bg=$thm_blue]  Tmux #[fg=$thm_bg,bg=$thm_blue] #[fg=$thm_blue,bg=$thm_bg]#[fg=$thm_blue,bg=$thm_bg] "
+  readonly show_window_in_window_status="#[fg=$thm_gray,bg=$thm_bg]#[fg=$thm_fg,bg=$thm_gray]#{b:pane_current_path} #[fg=$thm_fg,bg=$thm_gray] #I#[fg=$thm_gray,bg=$thm_bg]#[fg=$thm_gray,bg=$thm_bg] "
+  readonly show_mem_cpu="#[fg=$thm_gray,bg=$thm_bg]#[fg=$thm_blue,bg=$thm_gray]  Tmux #[fg=$thm_blue,bg=$thm_gray] #[fg=$thm_gray,bg=$thm_bg]#[fg=$thm_gray,bg=$thm_bg] "
   readonly show_window_in_window_status_current="#[fg=$thm_blue,bg=$thm_bg]#[fg=$thm_gray,bg=$thm_blue]#{b:pane_current_path} #[fg=$thm_bg,bg=$thm_blue] #I#[fg=$thm_blue,bg=$thm_bg]#[fg=$thm_blue,bg=$thm_bg] "
  # readonly show_window_in_window_status="#[fg=$thm_blue,bg=$thm_bg,nobold,nounderscore,noitalics]#[fg=$thm_bg,bg=$thm_blue,nobold,nounderscore,noitalics] #[fg=$thm_fg,bg=$thm_bg] #{b:pane_current_path} #[fg=$thm_bg,bg=$thm_blue] #I#[fg=$thm_blue,bg=$thm_bg]#[fg=$thm_fg,bg=$thm_bg,nobold,nounderscore,noitalics] "
  # readonly show_window_in_window_status_current="#[fg=$thm_orange,bg=$thm_bg,nobold,nounderscore,noitalics]#[fg=$thm_bg,bg=$thm_orange,nobold,nounderscore,noitalics] #[fg=$thm_fg,bg=$thm_gray] #{b:pane_current_path} #[fg=$thm_bg,bg=$thm_orange] #I#[fg=$thm_orange,bg=$thm_bg]#[fg=$thm_fg,bg=$thm_bg,nobold,nounderscore,noitalics] "
