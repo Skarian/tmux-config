@@ -2,6 +2,12 @@
 
 ## Notes
 
-Comment out this line -> set -g @plugin 'catppuccin/tmux'
+- Install Tmux and TPM ( tmux plugin manager )
 
-.tmux.conf and the .tmux folder in $HOME, start tmux and press I ( shift i ) to install.
+- set -g @plugin 'catppuccin/tmux' ( Install the global catppuccin theme, so this in your .tmux.conf )
+
+- Replace this files from my repo with the ones on your system 
+-- .tmux/plugins/tmux/catppuccin-mocha.tmuxtheme
+-- .tmux/plugins/tmux/catppuccin.tmux
+
+# Enjoy
