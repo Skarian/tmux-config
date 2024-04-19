@@ -75,7 +75,9 @@ main() {
   readonly show_window_in_window_status="#[fg=$thm_orange,bg=$thm_bg]#[fg=$thm_black4,bg=$thm_orange]#{b:pane_current_path} #[fg=$thm_black4,bg=$thm_orange] #I#[fg=$thm_orange,bg=$thm_bg]#[fg=$thm_orange,bg=$thm_bg] "
   readonly show_tmux_logo="#[fg=$thm_orange,bg=$thm_gray]#[fg=$thm_yellow,bg=$thm_orange] #[fg=$thm_yellow,bg=$thm_orange] #[fg=$thm_orange,bg=$thm_bg]#[fg=$thm_orange,bg=$thm_bg] "
   #readonly show_tmux_name="#[fg=$thm_orange,bg=$thm_bg]#[fg=$thm_blue,bg=$thm_orange]Tmux#[fg=$thm_blue,bg=$thm_orange] #[fg=$thm_orange,bg=$thm_bg]#[fg=$thm_orange,bg=$thm_bg] "
-  readonly show_tmux_name="#[fg=$thm_blue,bg=$thm_bg] Tmux  #[fg=$thm_blue,bg=$thm_bg]"
+
+  # readonly show_tmux_name="#[fg=$thm_blue,bg=$thm_bg]  #[fg=$thm_blue,bg=$thm_bg]"
+  readonly show_tmux_name="#[fg=$thm_blue,bg=$thm_bg]#[fg=$thm_blue,bg=$thm_bg]"
   readonly show_window_in_window_status_current="#[fg=$thm_blue,bg=$thm_bg]#[fg=$thm_bg,bg=$thm_blue]#{b:pane_current_path} #[fg=$thm_bg,bg=$thm_blue] #I#[fg=$thm_blue,bg=$thm_bg]#[fg=$thm_blue,bg=$thm_bg] "
  # readonly show_window_in_window_status="#[fg=$thm_blue,bg=$thm_bg,nobold,nounderscore,noitalics]#[fg=$thm_bg,bg=$thm_blue,nobold,nounderscore,noitalics] #[fg=$thm_fg,bg=$thm_bg] #{b:pane_current_path} #[fg=$thm_bg,bg=$thm_blue] #I#[fg=$thm_blue,bg=$thm_bg]#[fg=$thm_fg,bg=$thm_bg,nobold,nounderscore,noitalics] "
  # readonly show_window_in_window_status_current="#[fg=$thm_orange,bg=$thm_bg,nobold,nounderscore,noitalics]#[fg=$thm_bg,bg=$thm_orange,nobold,nounderscore,noitalics] #[fg=$thm_fg,bg=$thm_gray] #{b:pane_current_path} #[fg=$thm_bg,bg=$thm_orange] #I#[fg=$thm_orange,bg=$thm_bg]#[fg=$thm_fg,bg=$thm_bg,nobold,nounderscore,noitalics] "
@@ -92,8 +94,10 @@ main() {
   # Window status by default shows the current directory basename.
   #local window_status_format=$show_directory_in_window_status
   #local window_status_current_format=$show_directory_in_window_status_current
-  local window_status_format=$show_window_in_window_status
-  local window_status_current_format=$show_window_in_window_status_current
+  local window_status_format="#[fg=$thm_orange,bg=$thm_bg]#[fg=$thm_black4,bg=$thm_orange]#I #[fg=$thm_black4,bg=$thm_orange]#W#[fg=$thm_orange,bg=$thm_bg]#[fg=$thm_orange,bg=$thm_bg] "
+  local window_status_current_format="#[fg=$thm_blue,bg=$thm_bg]#[fg=$thm_bg,bg=$thm_blue]#I #[fg=$thm_bg,bg=$thm_blue]#W#[fg=$thm_blue,bg=$thm_bg]#[fg=$thm_blue,bg=$thm_bg] "
+
+
 
   # NOTE: With the @catppuccin_window_tabs_enabled set to on, we're going to
   # update the right_column1 and the window_status_* variables.
